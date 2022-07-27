@@ -102,6 +102,7 @@ button {
   border: none;
   outline: none;
   padding: 10px;
+  width: 100%;
   border: 1px solid #0f002b;
   transition: 0.5s ease;
   border-radius: 5px;
