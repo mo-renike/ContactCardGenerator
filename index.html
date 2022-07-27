@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phone App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Phonie</h1>
+      <p>Enter your Nigerian Phone number without the country code</p>
+      <p>Optional: Enter Your name and Picture to generate your contact card</p>
+      <div class="display">
+        <div class="img">
+          <img src="" id="img" alt="img" />
+        </div>
+        <h3 id="display"></h3>
+      </div>
+      <form action="#">
+        <input
+          autocomplete="on"
+          placeholder="Enter Your Number"
+          type="text"
+          name="tel"
+          id="tel"
+          required
+        />
+        <input
+          type="text"
+          name="Full Name"
+          id="username"
+          required
+          placeholder="Enter Your Name"
+        />
+        <input
+          style="cursor: pointer"
+          type="file"
+          name="photo"
+          id="file-selector"
+          required
+          capture="user"
+          placeholder="Upload a nice Photo"
+          accept="image/png, image/jpeg,"
+          onchange="previewFile()"
+        />
+
+        <div id="tel_error"></div>
+        <div class="d-flex">
+          <!-- <button type="reset">Reset</button> -->
+          <button id="submit" type="button">Generate Card</button>
+        </div>
+      </form>
+      <p><small id="date"></small></p>
+    </div>
+    <div id="modal">
+      <div id="close">&times;</div>
+      <div class="flipper">
+      <div class="front">
+        <h2>Contact Card</h2>
+        <div class="modal_dets">
+          <div class="d-grid">
+            <div class="profile_img">
+              <img src="" id="display_img" />
+            </div>
+            <div id="details">
+              <p>Name: <span id="display_name"></span> </p>
+              <p>Phone Number: <span id="display_tel"></span> </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <h4 style="padding-left: 10px">Click to flip!</h4>
+          <a rel="nofollow" href="http://" border="0" style="cursor: default"
+            ><img
+              src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fmo-renike.github.io%2Fportfolio-page%2F&chs=180x180&choe=UTF-8&chld=L|2"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="back">
+        <div class="heading">
+          <h2>Hi, my name is Morenike</h2>
+          <p>Contact Me Let's make something great!</p>
+        </div>
+        <div style="width: max-content; margin: auto">
+          <address>
+            <a href="#"
+              ><i class="fa fa-map-marker" aria-hidden="true"></i> Lagos
+              Nigeria</a
+            >
+            <a href="mailto:herroyalpianist@gmail.com"
+              ><i class="fa fa-envelope"></i> Send a mail
+            </a>
+            <a href="tel:+2348099772916">
+              <i class="fa fa-phone"></i> Call +234 809 977 2916</a
+            >
+          </address>
+          <div class="social-links">
+            <a href="https://github.com/mo-renike"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a href="https://codepen.io/herroyalpianist"
+              ><i class="fa fa-codepen"></i
+            ></a>
+            <a href="https://twitter.com/Mo_renike_"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/herroyalpianist/"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/oyewole-morenike-572104120/"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div style="padding: 10px" class="footer">
+          <p style="margin: auto">
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Morenike
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
